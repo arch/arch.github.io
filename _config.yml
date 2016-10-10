@@ -6,10 +6,6 @@ kramdown:
 paginate: 5
 github: https://github.com/lovedotnet
 urls:
-    - text: github
-      url: https://github.com/lovedotnet
-    - text: email
-      url: mailto:rigofunc@outlook.com
     - text: rigofunc
       url: https://github.com/xyting
     - text: lotosbin
