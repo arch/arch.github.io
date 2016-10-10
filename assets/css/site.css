@@ -1,0 +1,21 @@
+.main-content {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.post {
+  margin-bottom: 20px;
+}
+.post-title {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+.post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+}
+

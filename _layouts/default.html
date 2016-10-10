@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %} {{ page.title }} {% else %} {{ site.name }} {% endif %}</title>
+
+  <link href="{{ site.url }}/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/css/highlight.css" rel="stylesheet">
+  <link href="{{ site.url }}/assets/css/site.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img class="img-circle" src="{{ site.url }}/images/logo.PNG" width="50" height="50">
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="https://github.com/lovedotnet/">VIEW ON GITHUB</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row main-content">
+      <div class="col-md-9 main-content">
+        {{ content }}
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            ABOUT
+          </div>
+          <div class="panel-body">
+            <p>We are programmers, lives in Hangzhou, Zhejiang, China. The difference with other programmers is We are .NET lover and developer, 
+              but we also embrace all the new stuff. (^&lt;&gt;^)</p>
+            <p>A man like we, are unique in the world of existence, no matter where you go, there belonging to our stage. Like
+              desert gold, light can not hide forever! Especially our messy hair, melancholy eyes, sigh of stubble, handsome
+              face, are deeply addicted whom even we.</p>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            ELSEWHERE
+          </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-justified">
+              {% for i in site.urls %}
+              <li role="presentation"><a href="{{ i.url }}">{{ i.text }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; {{ site.time | date: '%Y' }} love.net team. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="{{ site.url }}/assets/js/jquery-2.1.4.min.js"></script>
+  <script src="{{ site.url }}/assets/js/bootstrap.min.js"></script>
+  <script src="{{ site.url }}/assets/js/site.js"></script>
+</body>
+
+</html>

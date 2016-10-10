@@ -1,0 +1,12 @@
+---
+layout: default 
+---
+
+<div class="panel panel-default">
+  <div class="panel-heading">contacts</div>
+  <div class="panel-body">
+    {% for i in site.urls %}
+      <a href="{{ i.url }}">{{ i.text }}</a> 
+    {% endfor %}
+  </div>
+</div>
