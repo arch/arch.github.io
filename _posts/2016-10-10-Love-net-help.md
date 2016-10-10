@@ -1,6 +1,6 @@
 ---
 layout: default
-title: A generate API documentation toolchain for ASP.NET Core.
+title: An API documentation toolchain for ASP.NET Core.
 ---
 
 There are many API document generate tools, like `swagger`, but when ASP.NET Core release v1.0, the `swagger` hard to use, 
@@ -9,7 +9,7 @@ different UI, the UI will more details in following section.
 
 # Love.Net.Help
 
-A generate API documentation toolchain for ASP.NET Core. 
+An API documentation toolchain for ASP.NET Core. 
 
 [![Join the chat at https://gitter.im/lovedotnet/Love.Net.Help](https://badges.gitter.im/lovedotnet/Love.Net.Help.svg)](https://gitter.im/lovedotnet/Love.Net.Help?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
 
