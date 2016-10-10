@@ -17,28 +17,28 @@ A generate API documentation toolchain for ASP.NET Core.
 - [x] Get **Enum** raw constant value and XML comments.
 
 ```csharp
-    public enum Gender {
-        /// <summary>
-        /// 未知.
-        /// </summary>
-        Unknown,
-        /// <summary>
-        /// 男性.
-        /// </summary>
-        Male,
-        /// <summary>
-        /// 女性.
-        /// </summary>
-        Female,
-    }
+public enum Gender {
+    /// <summary>
+    /// 未知.
+    /// </summary>
+    Unknown,
+    /// <summary>
+    /// 男性.
+    /// </summary>
+    Male,
+    /// <summary>
+    /// 女性.
+    /// </summary>
+    Female,
+}
 ```
     
 ```json
-    {
-      "0": "未知", 
-      "1": "男性", 
-      "2": "女性"
-    }
+{
+  "0": "未知", 
+  "1": "男性", 
+  "2": "女性"
+}
 ```
 - [x] Generate API documentation for ASP.NET Core.
 - [x] JsonOutputFormatter use camel case or not determined by the API (Because it's API).
@@ -72,15 +72,14 @@ A generate API documentation toolchain for ASP.NET Core.
 Add API help to services `services.AddMvcCore().AddApiHelp()`
 
 ```csharp
-        public void ConfigureServices(IServiceCollection services) {
-            services.AddMvcCore()
-                .AddJsonFormatters(options => {
-                    options.ContractResolver = new DefaultContractResolver();
-                }).AddApiHelp();
+public void ConfigureServices(IServiceCollection services) {
+    services.AddMvcCore()
+        .AddJsonFormatters(options => {
+            options.ContractResolver = new DefaultContractResolver();
+        }).AddApiHelp();
 
-            services.UseDefaultAccountService<User>(null);
-        }
-
+    services.UseDefaultAccountService<User>(null);
+}
 ```
 
 ## Use UI middleware  `app.UseApiHelpUI();`
@@ -111,15 +110,15 @@ Browser `http://localhost:10571/api/help/ui`
 ## Options for API help
 
 ```csharp
-        public void ConfigureServices(IServiceCollection services) {
-            services.AddMvcCore()
-                .AddJsonFormatters(options => {
-                    options.ContractResolver = new DefaultContractResolver();
-                }).AddApiHelp(options => {
-                    options.IgnoreObsoleteApi = true;
-                    options.LoadingPolicy = LoadingPolicy.Eager;
-                });
-        }
+public void ConfigureServices(IServiceCollection services) {
+    services.AddMvcCore()
+        .AddJsonFormatters(options => {
+            options.ContractResolver = new DefaultContractResolver();
+        }).AddApiHelp(options => {
+            options.IgnoreObsoleteApi = true;
+            options.LoadingPolicy = LoadingPolicy.Eager;
+        });
+}
 ```
 
 ```csharp
