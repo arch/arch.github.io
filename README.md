@@ -1,3 +1,3 @@
-# love.net team official site
+# love.net team
 
 This repo contains **love.net team official site**.
