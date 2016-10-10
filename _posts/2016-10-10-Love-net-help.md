@@ -3,8 +3,9 @@ layout: default
 title: A generate API documentation toolchain for ASP.NET Core.
 ---
 
-There are many API document generate tools, like `swagger`, when ASP.NET Core release v1.0, the `swagger` hard to use, so `love.net` team
-develop a API documentation toolchain for ASP.NET Core.
+There are many API document generate tools, like `swagger`, but when ASP.NET Core release v1.0, the `swagger` hard to use, 
+so [love.net team](https://github.com/lovedotnet/) develop a API documentation toolchain for ASP.NET Core. This toolchain provides three
+different UI, the UI will more details in following section.
 
 # Love.Net.Help
 
