@@ -3,6 +3,9 @@ layout: default
 title: A generate API documentation toolchain for ASP.NET Core.
 ---
 
+There are many API document generate tools, like `swagger`, when ASP.NET Core release v1.0, the `swagger` hard to use, so `love.net` team
+develop a API documentation toolchain for ASP.NET Core.
+
 # Love.Net.Help
 
 A generate API documentation toolchain for ASP.NET Core. 
@@ -13,7 +16,7 @@ A generate API documentation toolchain for ASP.NET Core.
 - [x] Read XML comments at run time (so the deployment need to include yourAssembly.xml file).
 - [x] Get **Enum** raw constant value and XML comments.
 
-    ```C#
+```csharp
     public enum Gender {
         /// <summary>
         /// 未知.
@@ -28,15 +31,15 @@ A generate API documentation toolchain for ASP.NET Core.
         /// </summary>
         Female,
     }
-    ```
+```
     
-    ```JSON
+```json
     {
       "0": "未知", 
       "1": "男性", 
       "2": "女性"
     }
-    ```
+```
 - [x] Generate API documentation for ASP.NET Core.
 - [x] JsonOutputFormatter use camel case or not determined by the API (Because it's API).
 - [x] More...
@@ -68,7 +71,7 @@ A generate API documentation toolchain for ASP.NET Core.
 
 Add API help to services `services.AddMvcCore().AddApiHelp()`
 
-```C#
+```csharp
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvcCore()
                 .AddJsonFormatters(options => {
@@ -92,7 +95,7 @@ or
 
 `PM> Install-Package Love.Net.Help.UI`
 
-```C#
+```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
     loggerFactory.AddConsole(Configuration.GetSection("Logging"));
     loggerFactory.AddDebug();
@@ -107,7 +110,7 @@ Browser `http://localhost:10571/api/help/ui`
 
 ## Options for API help
 
-```C#
+```csharp
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvcCore()
                 .AddJsonFormatters(options => {
@@ -119,7 +122,7 @@ Browser `http://localhost:10571/api/help/ui`
         }
 ```
 
-```C#
+```csharp
 namespace Love.Net.Help {
     public class ApiHelpOptions {
         /// <summary>
