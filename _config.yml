@@ -1,22 +1,12 @@
-name: love.net team official site
+name: Arch team official site
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
 paginate: 5
-github: https://github.com/lovedotnet
+github: https://github.com/Arch
 urls:
     - text: rigofunc
       url: https://github.com/xyting
-    - text: lotosbin
-      url: https://github.com/lotosbin
-    - text: zcjin
-      url: https://github.com/zicjin
-    - text: yonglehou
-      url: https://github.com/yonglehou
-    - text: wangshifeng
-      url: https://github.com/wangshifeng
-    - text: linqtosql
-      url: https://github.com/linqtosql
-    - text: lilong
-      url: https://github.com/lilong9298
+    - text: Arch
+      url: https://github.com/Arch
